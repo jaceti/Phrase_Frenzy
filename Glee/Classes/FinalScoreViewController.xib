@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4096" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinalScoreViewController">
+            <connections>
+                <outlet property="endGameView" destination="80" id="91"/>
+                <outlet property="lbScore1" destination="66" id="69"/>
+                <outlet property="lbScore2" destination="67" id="70"/>
+                <outlet property="lbTeam1" destination="64" id="71"/>
+                <outlet property="lbTeam2" destination="65" id="72"/>
+                <outlet property="lbWinner" destination="63" id="73"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="TidbitView">
+            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bkgd_game.png" translatesAutoresizingMaskIntoConstraints="NO" id="86">
+                    <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="game_scorebox.png" translatesAutoresizingMaskIntoConstraints="NO" id="87">
+                    <rect key="frame" x="190" y="188.66666666666666" width="156" height="88.999999999999972"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="game_scorebox.png" translatesAutoresizingMaskIntoConstraints="NO" id="88">
+                    <rect key="frame" x="390" y="188.66666666666666" width="156" height="88.999999999999972"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61">
+                    <rect key="frame" x="22" y="354" width="90" height="37"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="btn_menu.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backToMenu" destination="-1" eventType="touchUpInside" id="75"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62">
+                    <rect key="frame" x="565" y="354" width="148" height="37"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="btn_playagain.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onPlayAgain" destination="-1" eventType="touchUpInside" id="74"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Winner name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="63" customClass="CPLabel">
+                    <rect key="frame" x="254.66666666666663" y="121" width="227" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" red="0.98798537254333496" green="0.30799439549446106" blue="0.030261486768722534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="and the winner is..." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="68" customClass="CPLabel">
+                    <rect key="frame" x="247.66666666666663" y="83.666666666666671" width="241" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.041695244610309601" green="0.35686185956001282" blue="0.75901687145233154" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Team 1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="64" customClass="CPLabel">
+                    <rect key="frame" x="239.99999999999997" y="195" width="56.666666666666657" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.99992191791534424" green="0.99559259414672852" blue="0.97536087036132812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="66" customClass="CPLabel">
+                    <rect key="frame" x="251.66666666666666" y="205.66666666666666" width="33.333333333333343" height="66.999999999999972"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                    <color key="textColor" red="0.9951789379119873" green="0.76437407732009888" blue="0.039127945899963379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="67" customClass="CPLabel">
+                    <rect key="frame" x="437.66666666666669" y="205" width="59.333333333333314" height="67"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                    <color key="textColor" red="0.9951789379119873" green="0.76437407732009888" blue="0.039127945899963379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Team 2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="65" customClass="CPLabel">
+                    <rect key="frame" x="437.66666666666669" y="195" width="59" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.99992191791534424" green="0.99559259414672852" blue="0.97536087036132812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="64" firstAttribute="centerY" secondItem="87" secondAttribute="centerY" constant="-27.5" id="0pq-pd-D39"/>
+                <constraint firstItem="86" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="2hJ-58-eZr"/>
+                <constraint firstItem="87" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" constant="-100" id="4BH-o9-mrg"/>
+                <constraint firstItem="88" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" constant="26" id="53Q-pX-SDQ"/>
+                <constraint firstItem="64" firstAttribute="centerX" secondItem="87" secondAttribute="centerX" id="5eM-DB-6Sr"/>
+                <constraint firstAttribute="bottom" secondItem="61" secondAttribute="bottom" constant="23" id="6fv-MZ-1Dk"/>
+                <constraint firstItem="65" firstAttribute="centerY" secondItem="88" secondAttribute="centerY" constant="-27.5" id="7Bw-82-OMm"/>
+                <constraint firstItem="67" firstAttribute="centerX" secondItem="88" secondAttribute="centerX" constant="-1" id="8K4-8j-tXT"/>
+                <constraint firstItem="68" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" constant="-105.5" id="9z2-IF-xuK"/>
+                <constraint firstItem="67" firstAttribute="centerY" secondItem="88" secondAttribute="centerY" constant="5.5" id="GnN-Oh-LIz"/>
+                <constraint firstItem="68" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="Js2-vO-9f3"/>
+                <constraint firstItem="65" firstAttribute="centerX" secondItem="88" secondAttribute="centerX" constant="-1" id="PK9-oy-k6G"/>
+                <constraint firstItem="63" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="WlY-h5-kMv"/>
+                <constraint firstItem="87" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" constant="26" id="Yqo-zb-PcD"/>
+                <constraint firstAttribute="bottom" secondItem="86" secondAttribute="bottom" id="cht-Fw-tNn"/>
+                <constraint firstItem="63" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" constant="-62" id="dMG-zI-CtP"/>
+                <constraint firstAttribute="bottom" secondItem="62" secondAttribute="bottom" constant="23" id="di5-bL-75C"/>
+                <constraint firstItem="86" firstAttribute="top" secondItem="1" secondAttribute="top" id="dyO-zO-gRg"/>
+                <constraint firstItem="66" firstAttribute="centerY" secondItem="87" secondAttribute="centerY" constant="6" id="eRd-1F-IMN"/>
+                <constraint firstItem="88" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" constant="100" id="hHE-dy-izf"/>
+                <constraint firstItem="66" firstAttribute="centerX" secondItem="87" secondAttribute="centerX" id="lqj-1Y-l1M"/>
+                <constraint firstItem="61" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="22" id="nIx-kS-GQI"/>
+                <constraint firstAttribute="trailing" secondItem="86" secondAttribute="trailing" id="vYj-nd-DLf"/>
+                <constraint firstAttribute="trailing" secondItem="62" secondAttribute="trailing" constant="23" id="vzC-vT-eTs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="34" y="448"/>
+        </view>
+        <view contentMode="scaleToFill" id="80" customClass="TidbitView">
+            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bkgd_popup.png" translatesAutoresizingMaskIntoConstraints="NO" id="89">
+                    <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_popup_question.png" translatesAutoresizingMaskIntoConstraints="NO" id="90">
+                    <rect key="frame" x="170.66666666666663" y="139.66666666666666" width="395" height="52"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81">
+                    <rect key="frame" x="296" y="220" width="64" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="btn_yes.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onReturnToMenu" destination="-1" eventType="touchUpInside" id="84"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82">
+                    <rect key="frame" x="371" y="220" width="64" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="btn_no.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onCancelReturningToMenu" destination="-1" eventType="touchUpInside" id="85"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="89" firstAttribute="leading" secondItem="80" secondAttribute="leading" id="CBs-Tt-fW1"/>
+                <constraint firstAttribute="trailing" secondItem="89" secondAttribute="trailing" id="Cgs-0y-iMr"/>
+                <constraint firstItem="82" firstAttribute="centerX" secondItem="80" secondAttribute="centerX" constant="35" id="D9X-Z8-OYB"/>
+                <constraint firstAttribute="bottom" secondItem="89" secondAttribute="bottom" id="GlA-fw-QHI"/>
+                <constraint firstItem="89" firstAttribute="top" secondItem="80" secondAttribute="top" id="QIe-Ka-bmg"/>
+                <constraint firstItem="90" firstAttribute="centerX" secondItem="80" secondAttribute="centerX" id="SCK-9b-4fs"/>
+                <constraint firstItem="90" firstAttribute="centerY" secondItem="80" secondAttribute="centerY" multiplier="0.8" id="Xzg-Es-1HW"/>
+                <constraint firstItem="82" firstAttribute="centerY" secondItem="80" secondAttribute="centerY" constant="31" id="dBU-JU-cby"/>
+                <constraint firstItem="81" firstAttribute="centerX" secondItem="80" secondAttribute="centerX" constant="-40" id="mdl-08-lyl"/>
+                <constraint firstItem="81" firstAttribute="centerY" secondItem="80" secondAttribute="centerY" constant="31" id="qXZ-lq-uDa"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="-793" y="448"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bkgd_game.png" width="568" height="320"/>
+        <image name="bkgd_popup.png" width="568" height="320"/>
+        <image name="btn_menu.png" width="90" height="37"/>
+        <image name="btn_no.png" width="64" height="36"/>
+        <image name="btn_playagain.png" width="148" height="37"/>
+        <image name="btn_yes.png" width="64" height="36"/>
+        <image name="game_scorebox.png" width="156" height="89"/>
+        <image name="menu_popup_question.png" width="395" height="52"/>
+    </resources>
+</document>

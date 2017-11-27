@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4096" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="lte50429.ttf">
+            <string>FranklinGothicLT-Condensed</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameSetupViewController">
+            <connections>
+                <outlet property="btCategoryLeft" destination="31" id="53"/>
+                <outlet property="btCategoryRight" destination="32" id="54"/>
+                <outlet property="btPointsLeft" destination="20" id="55"/>
+                <outlet property="btPointsRight" destination="29" id="56"/>
+                <outlet property="btSoundsLeft" destination="25" id="57"/>
+                <outlet property="btSoundsRight" destination="23" id="58"/>
+                <outlet property="lbBuzzerSound" destination="17" id="43"/>
+                <outlet property="lbCategory" destination="33" id="44"/>
+                <outlet property="lbPointsToWin" destination="26" id="45"/>
+                <outlet property="txTeam1" destination="16" id="46"/>
+                <outlet property="txTeam2" destination="18" id="47"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="TidbitView">
+            <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="bkgd_game_ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="49">
+                    <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="setup_team1_ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="50">
+                    <rect key="frame" x="233.5" y="205.5" width="449" height="145"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="setup_team2_ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="51">
+                    <rect key="frame" x="688.5" y="205.5" width="449" height="145"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="setup_options_ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="52">
+                    <rect key="frame" x="198" y="365" width="970" height="351"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Standard" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="17" customClass="CPLabel">
+                    <rect key="frame" x="741" y="618" width="188.5" height="54"/>
+                    <fontDescription key="fontDescription" name="FranklinGothicLT-Condensed" family="FranklinGothic LT Condensed" pointSize="46"/>
+                    <color key="textColor" red="0.97552376985549927" green="0.75042629241943359" blue="0.036118201911449432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                    <rect key="frame" x="1064" y="605" width="60" height="79"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="setup_arrow_right_ipad.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onSoundRight" destination="-1" eventType="touchUpInside" id="42"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25">
+                    <rect key="frame" x="540" y="605" width="60" height="79"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="setup_arrow_left_ipad.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onSoundLeft" destination="-1" eventType="touchUpInside" id="41"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="26" customClass="CPLabel">
+                    <rect key="frame" x="822.5" y="409" width="26" height="54"/>
+                    <fontDescription key="fontDescription" name="FranklinGothicLT-Condensed" family="FranklinGothic LT Condensed" pointSize="46"/>
+                    <color key="textColor" red="0.97552376985549927" green="0.75042629241943359" blue="0.036118201911449432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                    <rect key="frame" x="969" y="887" width="351" height="88"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="btn_startgame_ipad.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onStartGame" destination="-1" eventType="touchUpInside" id="34"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29">
+                    <rect key="frame" x="1064" y="396" width="60" height="79"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="setup_arrow_right_ipad.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onPointsRight" destination="-1" eventType="touchUpInside" id="38"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30">
+                    <rect key="frame" x="48" y="887" width="175" height="88"/>
+                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                    <state key="normal" backgroundImage="btn_back_ipad.png">
+                        <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backToMenu" destination="-1" eventType="touchUpInside" id="48"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31">
+                    <rect key="frame" x="540" y="502" width="60" height="79"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="setup_arrow_left_ipad.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onCategoryLeft" destination="-1" eventType="touchUpInside" id="39"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32">
+                    <rect key="frame" x="1066" y="501" width="60" height="79"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="setup_arrow_right_ipad.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onCategoryRight" destination="-1" eventType="touchUpInside" id="40"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Everything" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="33" customClass="CPLabel">
+                    <rect key="frame" x="727.5" y="513.5" width="216.5" height="54"/>
+                    <fontDescription key="fontDescription" name="FranklinGothicLT-Condensed" family="FranklinGothic LT Condensed" pointSize="46"/>
+                    <color key="textColor" red="0.97552376985549927" green="0.75042629241943359" blue="0.036118201911449432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Team 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                    <rect key="frame" x="829" y="275" width="159" height="56"/>
+                    <color key="textColor" red="0.99487817287445068" green="0.74992483854293823" blue="0.038899015635251999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="FranklinGothicLT-Condensed" family="FranklinGothic LT Condensed" pointSize="48"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="36"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Team 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16">
+                    <rect key="frame" x="378.5" y="275.5" width="159" height="56"/>
+                    <color key="textColor" red="0.99487817287445068" green="0.74992483854293823" blue="0.038899015635251999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="FranklinGothicLT-Condensed" family="FranklinGothic LT Condensed" pointSize="48"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="35"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                    <rect key="frame" x="540" y="396" width="60" height="79"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="setup_arrow_left_ipad.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onPointsLeft" destination="-1" eventType="touchUpInside" id="37"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="23" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="411" id="3ya-Kp-chs"/>
+                <constraint firstItem="50" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" constant="-225" id="4Hl-Fw-dH9"/>
+                <constraint firstItem="17" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="152" id="7xq-gW-Hho"/>
+                <constraint firstItem="32" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="413" id="9DL-yF-SA5"/>
+                <constraint firstAttribute="trailing" secondItem="49" secondAttribute="trailing" id="AEe-G0-yAW"/>
+                <constraint firstItem="17" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" constant="104.5" id="Ale-i0-ID6"/>
+                <constraint firstItem="31" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" constant="1" id="Alr-Di-UaS"/>
+                <constraint firstItem="25" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="-113" id="BhQ-n5-DJf"/>
+                <constraint firstItem="52" firstAttribute="centerY" secondItem="49" secondAttribute="centerY" constant="28.5" id="Dzv-hB-Aqj"/>
+                <constraint firstItem="31" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="-113" id="E5V-CT-mmw"/>
+                <constraint firstItem="30" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="48" id="GKp-BH-Caq"/>
+                <constraint firstItem="16" firstAttribute="centerY" secondItem="50" secondAttribute="centerY" constant="25.5" id="Isr-Vv-xFH"/>
+                <constraint firstItem="16" firstAttribute="centerX" secondItem="50" secondAttribute="centerX" id="J74-Oc-VAT"/>
+                <constraint firstItem="33" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="152" id="Jwu-2A-SNY"/>
+                <constraint firstItem="49" firstAttribute="top" secondItem="1" secondAttribute="top" id="NTu-Sv-YHG"/>
+                <constraint firstItem="26" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="152" id="PJX-Ko-uXe"/>
+                <constraint firstItem="26" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" constant="-104.5" id="PvN-55-0eL"/>
+                <constraint firstItem="51" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" constant="-234" id="QbC-YV-cqq"/>
+                <constraint firstItem="20" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="-113" id="R23-Aq-w0F"/>
+                <constraint firstItem="52" firstAttribute="centerX" secondItem="49" secondAttribute="centerX" id="SEb-3b-SNG"/>
+                <constraint firstItem="50" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" constant="-234" id="T8e-f1-ZSQ"/>
+                <constraint firstItem="29" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="411" id="Tam-Zs-u29"/>
+                <constraint firstItem="20" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" constant="-105" id="Tqc-PX-33j"/>
+                <constraint firstItem="23" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" constant="104" id="WpX-nD-NlY"/>
+                <constraint firstItem="25" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" constant="104" id="aMn-ZQ-nb0"/>
+                <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="46" id="bHT-23-FAb"/>
+                <constraint firstItem="49" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="fLj-2l-YGa"/>
+                <constraint firstItem="51" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" constant="230" id="gDS-fp-8pl"/>
+                <constraint firstItem="32" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" id="iNc-rp-9gA"/>
+                <constraint firstItem="18" firstAttribute="centerY" secondItem="51" secondAttribute="centerY" constant="25" id="kSn-PU-usx"/>
+                <constraint firstItem="33" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" id="mLv-a3-Gha"/>
+                <constraint firstAttribute="bottom" secondItem="49" secondAttribute="bottom" id="nI0-yM-0Mi"/>
+                <constraint firstItem="18" firstAttribute="centerX" secondItem="51" secondAttribute="centerX" constant="-4.5" id="ohT-2y-3lF"/>
+                <constraint firstAttribute="bottom" secondItem="30" secondAttribute="bottom" constant="49" id="u1L-OZ-UYd"/>
+                <constraint firstItem="29" firstAttribute="centerY" secondItem="52" secondAttribute="centerY" constant="-105" id="wXz-nr-3dM"/>
+                <constraint firstAttribute="bottom" secondItem="27" secondAttribute="bottom" constant="49" id="wYD-Zd-7e7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bkgd_game_ipad.png" width="1024" height="768"/>
+        <image name="btn_back_ipad.png" width="175" height="88"/>
+        <image name="btn_startgame_ipad.png" width="351" height="88"/>
+        <image name="setup_arrow_left_ipad.png" width="60" height="79"/>
+        <image name="setup_arrow_right_ipad.png" width="60" height="79"/>
+        <image name="setup_options_ipad.png" width="970" height="351"/>
+        <image name="setup_team1_ipad.png" width="449" height="145"/>
+        <image name="setup_team2_ipad.png" width="449" height="145"/>
+    </resources>
+</document>
